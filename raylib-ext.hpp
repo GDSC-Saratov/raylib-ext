@@ -3,6 +3,8 @@
 
 #include <string>
 #include <raylib.h>
+#include <raygui.h>
+#include <rlgl.h>
 
 #ifdef __cplusplus
 extern "C" {
