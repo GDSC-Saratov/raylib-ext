@@ -1,0 +1,13 @@
+.*
+
+# Windows
+CMakeFiles
+CMakeCache.txt
+CPack*
+*.cmake
+*.vcxproj*
+*.sln
+Debug
+Release
+x64
+
