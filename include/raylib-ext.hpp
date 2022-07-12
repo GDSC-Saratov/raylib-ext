@@ -67,191 +67,191 @@ Matrix& operator*=(Matrix &m1, const Matrix &m2) noexcept;
 
 /* Core */
 
-inline void 
+void 
 InitWindow(int width, int height, const std::string &title);
 
-inline void 
+void 
 SetWindowTitle(const std::string &title);
 
-inline void
+void
 SetClipboardText(const std::string &text);
 
-inline Shader
+Shader
 LoadShader(const std::string &vsFileName, const std::string &fsFileName);
 
-inline Shader
+Shader
 LoadShaderFromMemory(const std::string &vsCode, const std::string &fsCode);
 
-inline int
+int
 GetShaderLocation(Shader shader, const std::string &uniformName);
 
-inline int
+int
 GetShaderLocationAttrib(Shader shader, const std::string &attribName);
 
-inline void 
+void 
 TakeScreenshot(const std::string &fileName);
 
-inline unsigned char *
+unsigned char *
 LoadFileData(const std::string &fileName, unsigned int *bytesRead);
 
-inline bool
+bool
 SaveFileData(const std::string &fileName, void *data, unsigned int bytesToWrite);
 
-inline char *
+char *
 LoadFileText(const std::string &fileName);
 
-inline bool
+bool
 SaveFileText(const std::string &fileName, char *text);
 
-inline bool
+bool
 FileExists(const std::string &fileName);
 
-inline bool
+bool
 DirectoryExists(const std::string &dirPath);
 
-inline bool
+bool
 IsFileExtension(const std::string &fileName, const std::string &ext);
 
-inline const char *
+const char *
 GetFileExtension(const std::string &fileName);
 
-inline const char *
+const char *
 GetFileName(const std::string &filePath);
 
-inline const char *
+const char *
 GetFileNameWithoutExt(const std::string &filePath);
 
-inline const char *
+const char *
 GetDirectoryPath(const std::string &filePath);
 
-inline const char *
+const char *
 GetPrevDirectoryPath(const std::string &dirPath);
 
-inline bool
+bool
 ChangeDirectory(const std::string &dir);
 
-inline long
+long
 GetFileModTime(const std::string &fileName);
 
-inline void
+void
 OpenURL(const std::string &url);
 
 /* Textures */
 
-inline Image
+Image
 LoadImage(const std::string &fileName);
 
-inline Image
+Image
 LoadImageRaw(const std::string &fileName, int width, int height, int format, 
              int headerSize);
 
-inline Image
+Image
 LoadImageAnim(const std::string &fileName, int *frames);
 
-inline Image
+Image
 LoadImageFromMemory(const std::string &fileType, const unsigned char *fileData,
                     int dataSize);
 
-inline bool
+bool
 ExportImage(Image image, const std::string &fileName);
 
-inline bool
+bool
 ExportImageAsCode(Image image, const std::string &fileName);
 
-inline Image
+Image
 ImageText(const std::string &text, int fontSize, Color color);
 
-inline Image
+Image
 ImageTextEx(Font font, const std::string &text, float fontSize, float spacing,
             Color tint);
 
-inline void
+void
 ImageDrawText(Image *dst, const std::string &text, int posX, int posY,
               int fontSize, Color color);
 
-inline void
+void
 ImageDrawTextEx(Image *dst, Font font, const std::string &text,
                 Vector2 position, float fontSize, float spacing, Color tint);
 
-inline Texture2D
+Texture2D
 LoadTexture(const std::string &fileName);
 
 /* Text */
 
-inline Font
+Font
 LoadFont(const std::string &fileName);
 
-inline Font
+Font
 LoadFontEx(const std::string &fileName, int fontSize, int *fontChars,
            int glyphCount);
 
-inline Font
+Font
 LoadFontFromMemory(const std::string &fileType, const unsigned char *fileData,
                    int dataSize, int fontSize, int *fontChars, int glyphCount);
 
-inline void
+void
 DrawText(const std::string &text, int posX, int posY, int fontSize, Color color);
 
-inline void
+void
 DrawTextEx(Font font, const std::string &text, Vector2 position, float fontSize,
            float spacing, Color tint);
 
-inline void
+void
 DrawTextPro(Font font, const std::string &text, Vector2 position,
             Vector2 origin, float rotation, float fontSize, float spacing,
             Color tint);
 
-inline int
+int
 MeasureText(const std::string &text, int fontSize);
 
-inline Vector2
+Vector2
 MeasureTextEx(Font font, const std::string &text, float fontSize, float spacing);
 
-inline int*
+int*
 LoadCodepoints(const std::string &text, int *count);
 
-inline int
+int
 GetCodepointCount(const std::string &text);
 
-inline int
+int
 GetCodepoint(const std::string &text, int *bytesProcessed);
 
 /* Models */
 
-inline Model
+Model
 LoadModel(const std::string &fileName);
 
-inline bool
+bool
 ExportMesh(Mesh mesh, const std::string &fileName);
 
-inline Material*
+Material*
 LoadMaterials(const std::string &fileName, int *materialCount);
 
-inline ModelAnimation*
+ModelAnimation*
 LoadModelAnimations(const std::string &fileName, unsigned int *animCount);
 
 /* Audio */
 
-inline Wave
+Wave
 LoadWave(const std::string &fileName);
 
-inline Wave
+Wave
 LoadWaveFromMemory(const std::string &fileType, const unsigned char *fileData,
                    int dataSize);
 
-inline Sound
+Sound
 LoadSound(const std::string &fileName);
 
-inline bool
+bool
 ExportWave(Wave wave, const std::string &fileName);
 
-inline bool
+bool
 ExportWaveAsCode(Wave wave, const std::string &fileName);
 
-inline Music
+Music
 LoadMusicStream(const std::string &fileName);
 
-inline Music
+Music
 LoadMusicStreamFromMemory(const std::string &fileType, unsigned char *data,
                           int dataSize);
 
